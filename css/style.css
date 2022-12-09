@@ -55,14 +55,14 @@ span{
     color: #FFFFFF;
 }
 
-body{
+/* body{
     margin: 0 auto;
     width: 1346px;
     /*width: 1920px;*/
-    height: 6996px; 
-    background: #FFFFFF;
+    /* height: 6996px; 
+    background: #FFFFFF; 
     
-}
+} */
 
 .main-wrapper{
     margin: 0 auto;
@@ -94,12 +94,23 @@ header .main-wrapper{
     text-decoration: none;
 }
 
-.button-sign{
-    position: absolute;
-    width: 97px;
-    height: 32px;
+.btn{
+    /* position: absolute; */
+    /* width: 97px;
+    height: 32px; */
+    padding: 10px 20px 10px 20px;
     background: #CAA892;
     border-radius: 15px 0px;
+    
+}
+
+.btn-color{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
 }
 
 /* HERO */
@@ -120,18 +131,23 @@ header .main-wrapper{
     border-radius: 140px 0 140px 0;
 }
 
-.main-board{
+/* .main-board{
     height: 736px;
     width: 717px;
     height: 626px;
-}
+} */
 
 .button{
     position: absolute;
     width: 142px;
-    height: 42px;
+    height: 60px;
     background: #37806B;
     border-radius: 20px 0px;
+}
+
+.button-contact{
+    padding: 5px 20px 30px 20px;
+    
 }
 
 /* SERVICES */
@@ -166,14 +182,19 @@ header .main-wrapper{
     justify-content: space-between;
 }
 
-.services__item{
-    /* position: absolute; */
-    width: 425px;
-    height: 193px;
+.services__item{   
+    
+    /* position: relative; */
+    /* padding: 30px 15px; */
+    /* border: 1px solid; */
+    /* display: flex; */
+    width: 450px;
+    height: 200px;
     margin-top: 50px;
     background: #FFFFFF;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
-    border-radius: 60px 0px;   
+    border-radius: 60px 0px; 
+    
 }
 
 .services__item-brown{
@@ -183,4 +204,31 @@ header .main-wrapper{
     background: #CAA892;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
     border-radius: 60px 0px;
+}
+
+.box-icon{
+    float: left;
+    padding: 25px 20px 20px 25px;
+}
+.services-h5{
+    /* padding: 10px 10px 10px 10px;
+    position: absolute; */
+    /* width: 180px;
+    height: 78px; */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 78px;
+    color: #212121; 
+
+}
+.services-p{
+    padding: 10px 10px 10px 80px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #646464;
 }
