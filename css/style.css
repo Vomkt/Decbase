@@ -4,43 +4,77 @@
     box-sizing: border-box;
 }
 
+body, html {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    line-height: 1.66;
+}
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Add styles for all fonts */
+
+
 h1{
     font-family: 'Poppins';
+    /* Do not use it because it's normal by default font-style: normal;  - https://developer.mozilla.org/en-US/docs/Web/CSS/font-style */
     font-weight: 600;
-    font-size: 20px;
-    line-height: 27px;
-    color: #646464;
+    font-size: 72px;
+    /*
+    Line height should not be in PX, only EM
+    78px font size
+    72px line height
+
+    = 78 / 72 = 1.08em
+
+    line-height: 78px; - EUG
+    */
+    line-height: 1.08; /* Vitalii changed */
+    color: #212121;
+    margin-bottom: 23px;
 }
 
 h2{
-    /* width: 549px;
-    height: 156px; */
     font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 72px;
-    line-height: 78px;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.08; /* designer durak */
     color: #212121;
+    margin-bottom: 20px;
 }
 
 h5{
-    position: absolute;
+    /* position: absolute; */
+    /* We do not use width and height for typography
     width: 180px;
-    height: 78px;
+    height: 78px; */
     font-family: 'Open Sans';
-    font-style: normal;
+    /* font-style: normal;*/
     font-weight: 700;
     font-size: 24px;
-    line-height: 78px;
+    /* line-height: 78px; */
     color: #212121;
+    margin-bottom: 5px;
 }
 
-p{
-    font-family: 'Open Sans';
+h6{
+    /* font-family: 'Poppins';  Removed, as by design it's open sans, so we can remove it if we have open sans for body*/
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px; /* Line height should be in em, not px */
+    color: #646464;
+    margin-bottom: 5px;
+}
+
+p {
+    /* font-family: 'Open Sans';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 400; */
     font-size: 18px;
-    line-height: 30px;
+    /* line-height: 30px; */
     color: #646464;
 }
 
@@ -64,11 +98,9 @@ span{
     
 } */
 
-.main-wrapper{
+.container{
     margin: 0 auto;
     width: 1346px;
-    height: 47px;
-    margin-top: 46px;
 }
 
 /* MENU */
@@ -77,10 +109,23 @@ span{
     display: inline-block;   
 }
 
-header .main-wrapper{
+header {
+    padding-top: 34px;
+    padding-bottom: 34px;
+}
+
+header .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.main-menu > ul > li {
+    margin-right: 33px; 
+}
+
+.main-menu > ul > li:last-child {
+    margin-right: 0;
 }
 
 .main-menu > ul > li > a{
@@ -89,8 +134,8 @@ header .main-wrapper{
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 1px;
-    margin-right: 20px;
     color: #646464;
+    /* margin-right: 33px ;   Remove from here and move to LI */
     text-decoration: none;
 }
 
@@ -115,27 +160,78 @@ header .main-wrapper{
 
 /* HERO */
 
-.main-board .main-wrapper{
+.hero {
+    position: relative;
+}
+
+.hero__inner{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    height: 100%;
+    margin-left: -22px;
+    margin-right: -22px;
 }
 
-.main-board__left-block{
+.hero__left-block{
     width: 50%;
+    padding-right: 22px;
+    padding-left: 22px;
 }
 
-.main-board .main-wrapper > img{
+.hero__left-block .button {
+    margin-top: 46px;
+}
+
+.hero__img-wrapper {
+    width: 50%;
+    padding-right: 22px;
+    padding-left: 22px;
+}
+
+.hero__img-inner {
+    position: relative; /* need this for after element*/
+}
+
+.hero__img-inner::after {
+    content: "";
+    position: absolute;
+    left: 33px;
+    top: 33px;
+    width: 100%;
+    height: 100%;
+    border-radius: 140px 0 140px 0;
+    border: 2px solid #B0855B;
+    z-index: -1;
+}
+
+.hero__img {
+    max-width: 100%;
     margin: auto;
     border: 6px;
     border-radius: 140px 0 140px 0;
+    display: block;
+    height: 100%;
 }
 
-/* .main-board{
+.hero__decoration {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 212px;
+}
+
+.hero__decoration svg {
+    max-width: 100%;
+}
+
+/* .hero{
     height: 736px;
     width: 717px;
     height: 626px;
 } */
+
+
+/* Sorry, this is shit 
 
 .button{
     position: absolute;
@@ -150,6 +246,19 @@ header .main-wrapper{
     
 }
 
+*/
+
+.button {
+    display: inline-block;
+    background: #37806B;
+    border-radius: 20px 0px;
+    line-height: 1;
+    padding: 12px 35px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 /* SERVICES */
 
 .services-section1{
@@ -157,12 +266,12 @@ header .main-wrapper{
     width: 129px;
     height: 28px; */
     font-family: 'Poppins';
-    font-style: normal;
+    /* font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 28px;
     letter-spacing: -0.01em;
-    color: #646464;
+    color: #646464; */
 }
 
 .services-section2{
@@ -179,42 +288,66 @@ header .main-wrapper{
 
 .services__block-item{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin-left: -18px;
+    margin-right: -18px;
+    margin-top: 50px;
 }
 
-.services__item{   
-    
+.services__item {   
+    padding-left: 18px;
+    padding-right: 18px;
     /* position: relative; */
     /* padding: 30px 15px; */
     /* border: 1px solid; */
     /* display: flex; */
-    width: 450px;
-    height: 200px;
-    margin-top: 50px;
+    width: calc(100% / 3);
+    /* height: 200px; */
+    /* margin-top: 50px; */
+}
+
+.services__item:hover .services__item-inner {
+    background: #CAA892;
+    color: white;
+}
+
+.services__item:hover .services__item-inner * {
+    color: white;
+}
+
+.services__item-inner {
+    display: flex;
+    padding: 30px;
+    padding-right: 21px;
+    height: 100%;
     background: #FFFFFF;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
     border-radius: 60px 0px; 
-    
+
+    transition: .3s;
 }
 
-.services__item-brown{
+/* .services__item-brown{
     width: 425px;
     height: 193px;
     margin-top: 50px;
     background: #CAA892;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
     border-radius: 60px 0px;
-}
+} */
 
 .box-icon{
-    float: left;
-    padding: 25px 20px 20px 25px;
+    /* float: left; forget about this forever*/
+    /* padding: 25px 20px 20px 25px; */
+    margin-right: 20px;
 }
-.services-h5{
+
+
+/* .services-h5{
     /* padding: 10px 10px 10px 10px;
     position: absolute; */
     /* width: 180px;
-    height: 78px; */
+    height: 78px; 
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
@@ -231,4 +364,4 @@ header .main-wrapper{
     font-size: 18px;
     line-height: 30px;
     color: #646464;
-}
+} */
