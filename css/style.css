@@ -47,15 +47,13 @@ h2{
 }
 
 h5{
-    /* position: absolute; */
+    
     /* We do not use width and height for typography
     width: 180px;
     height: 78px; */
     font-family: 'Open Sans';
-    /* font-style: normal;*/
     font-weight: 700;
     font-size: 24px;
-    /* line-height: 78px; */
     color: #212121;
     margin-bottom: 5px;
 }
@@ -70,17 +68,11 @@ h6{
 }
 
 p {
-    /* font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400; */
     font-size: 18px;
-    /* line-height: 30px; */
     color: #646464;
 }
 
 span{
-    /* position: absolute; */
-    /* margin: 0 auto; */
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
@@ -88,15 +80,6 @@ span{
     line-height: 78px;
     color: #FFFFFF;
 }
-
-/* body{
-    margin: 0 auto;
-    width: 1346px;
-    /*width: 1920px;*/
-    /* height: 6996px; 
-    background: #FFFFFF; 
-    
-} */
 
 .container{
     margin: 0 auto;
@@ -106,7 +89,7 @@ span{
 /* MENU */
 
 .main-menu > ul > li{
-    display: inline-block;   
+    display: inline-block; /*Це значення створює блоковий елемент, який поводить себе подібно рядковому елементу.   */
 }
 
 header {
@@ -116,8 +99,8 @@ header {
 
 header .container{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; /*Елементи розташовані по центру контейнера.*/
+    justify-content: space-between; /*Флекси рівномірно розподіляються по всьому рядку. Перший і останній флекс притискаються до відповідних країв контейнера.*/
 }
 
 .main-menu > ul > li {
@@ -140,9 +123,6 @@ header .container{
 }
 
 .btn{
-    /* position: absolute; */
-    /* width: 97px;
-    height: 32px; */
     padding: 10px 20px 10px 20px;
     background: #CAA892;
     border-radius: 15px 0px;
@@ -161,14 +141,14 @@ header .container{
 /* HERO */
 
 .hero {
-    position: relative;
+    position: relative; /*Положення елемента встановлюється відносно його поточного положення*/
 }
 
 .hero__inner{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-left: -22px;
+    flex-wrap: wrap; /*Гнучкі елементи шикуються в кілька рядків, їх напрямок задається властивістю flex-direction.*/
+    align-items: center; /*Елементи розташовані по центру контейнера.*/
+    margin-left: -22px; /*чому від'ємне значення?*/
     margin-right: -22px;
 }
 
@@ -191,25 +171,31 @@ header .container{
 .hero__img-inner {
     position: relative; /* need this for after element*/
 }
+/*
+Селектор ::after додає що-небудь після контенту вказаного елемента(-ів).
+Використовуйте властивість content для визначення власного контенту, що буде додано.
+Порада:	
+Щоб додати що-небуть в кінці змісту елемента, використовуйте селектор ::before.
+*/
 
 .hero__img-inner::after {
     content: "";
-    position: absolute;
+    position: absolute; /*Видаляє елемент з загального потоку. (місце, що звільнив елемент заповнюється іншими елементами) і вставляється відносно свого батьківського, не статично позиційованого елемента, якщо такого елемента немає, то їм вважається вікно браузера (При цьому ширина елемента, без задання, встановлюється за його вмістом). Нове місце розраховується за допомогою властивостей*/
     left: 33px;
     top: 33px;
     width: 100%;
     height: 100%;
     border-radius: 140px 0 140px 0;
     border: 2px solid #B0855B;
-    z-index: -1;
+    z-index: -1; /*Властивість z-index визначає порядок стека елемента. Іншими словами, Ви можете розмістити елемент на сторінці вище іншого елементу або перед ним.*/
 }
 
 .hero__img {
     max-width: 100%;
-    margin: auto;
+    margin: auto; /*Браузер самостійно обчислить відступ.*/
     border: 6px;
     border-radius: 140px 0 140px 0;
-    display: block;
+    display: block; /*Елемент показується як блоковий. Вказавши це значення для елемента <span> - він почне вести себе як блоковий, тобто, його вміст буде завжди починатися з нового рядка.*/
     height: 100%;
 }
 
@@ -223,30 +209,6 @@ header .container{
 .hero__decoration svg {
     max-width: 100%;
 }
-
-/* .hero{
-    height: 736px;
-    width: 717px;
-    height: 626px;
-} */
-
-
-/* Sorry, this is shit 
-
-.button{
-    position: absolute;
-    width: 142px;
-    height: 60px;
-    background: #37806B;
-    border-radius: 20px 0px;
-}
-
-.button-contact{
-    padding: 5px 20px 30px 20px;
-    
-}
-
-*/
 
 .button {
     display: inline-block;
@@ -262,22 +224,10 @@ header .container{
 /* SERVICES */
 
 .services-section1{
-    /* position: absolute;
-    width: 129px;
-    height: 28px; */
     font-family: 'Poppins';
-    /* font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: -0.01em;
-    color: #646464; */
 }
 
 .services-section2{
-    /* position: absolute;
-    width: 276px;
-    height: 78px; */
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -288,7 +238,7 @@ header .container{
 
 .services__block-item{
     display: flex;
-    justify-content: center;
+    justify-content: center; /*Елементи розташовані в центрі контейнера.*/
     margin-left: -18px;
     margin-right: -18px;
     margin-top: 50px;
@@ -297,13 +247,7 @@ header .container{
 .services__item {   
     padding-left: 18px;
     padding-right: 18px;
-    /* position: relative; */
-    /* padding: 30px 15px; */
-    /* border: 1px solid; */
-    /* display: flex; */
-    width: calc(100% / 3);
-    /* height: 200px; */
-    /* margin-top: 50px; */
+    width: calc(100% / 3); /*calc() - это функция CSS, которая даёт возможность рассчитать значения свойств CSS во время их определения.*/
 }
 
 .services__item:hover .services__item-inner {
@@ -316,7 +260,7 @@ header .container{
 }
 
 .services__item-inner {
-    display: flex;
+    display: flex; /*Елемент поводиться як блоковий і викладає вміст згідно флекс-моделі*/
     padding: 30px;
     padding-right: 21px;
     height: 100%;
@@ -324,44 +268,147 @@ header .container{
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
     border-radius: 60px 0px; 
 
-    transition: .3s;
+    transition: .3s; /*CSS властивість transition встановлює ефект переходу між двома станами елемента. Використовується з псевдокласом :hover або :active або якщо стан елементу був динамічно змінений за допомогою JavaScript.*/
 }
-
-/* .services__item-brown{
-    width: 425px;
-    height: 193px;
-    margin-top: 50px;
-    background: #CAA892;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
-    border-radius: 60px 0px;
-} */
 
 .box-icon{
     /* float: left; forget about this forever*/
-    /* padding: 25px 20px 20px 25px; */
     margin-right: 20px;
 }
 
+/* SECTION INTERIORIS */
 
-/* .services-h5{
-    /* padding: 10px 10px 10px 10px;
-    position: absolute; */
-    /* width: 180px;
-    height: 78px; 
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 78px;
-    color: #212121; 
-
+.interioris__inner{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: -22px;
+    margin-right: -22px;
 }
-.services-p{
-    padding: 10px 10px 10px 80px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-    color: #646464;
-} */
+
+.interioris__left-block{
+    width: 50%;
+    padding-right: 22px;
+    padding-left: 22px;
+}
+
+.interioris__left-block .button {
+    margin-top: 46px;
+}
+
+.interioris__img-wrapper {
+    width: 50%;
+    padding-right: 22px;
+    padding-left: 22px;
+    text-align: right;
+}
+
+.interioris__img-inner {
+    position: relative; /* need this for after element*/
+}
+
+.interioris__img-inner::after {
+    content: "";
+    position: absolute;
+    left: -33px;
+    top: -33px;
+    width: 100%;
+    height: 100%;
+    border-radius: 140px 0 140px 0;
+    border: 2px solid #B0855B;
+    z-index: -1;
+}
+
+.interioris__img {
+    max-width: 100%;
+    margin: auto;
+    border: 6px;
+    border-radius: 140px 0 140px 0;
+    display: block;
+    height: 100%;
+}
+
+.button {
+    display: inline-block;
+    background: #37806B;
+    border-radius: 20px 0px;
+    line-height: 1;
+    padding: 12px 35px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* SECTION WORKING */
+
+.working__inner{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: -22px;
+    margin-right: -22px;
+}
+
+.working__left-block{
+    width: 50%;
+    padding-right: 22px;
+    padding-left: 22px;
+}
+
+.working__left-block .button {
+    margin-top: 46px;
+}
+
+.working__img-wrapper {
+    width: 50%;
+    padding-right: 22px;
+    padding-left: 22px;
+    text-align: right;
+}
+
+.working__img-inner {
+    position: relative; /* need this for after element*/
+}
+
+.working__img-inner::after {
+    content: "";
+    position: absolute;
+    left: 33px;
+    top: 33px;
+    width: 100%;
+    height: 100%;
+    border-radius: 140px 0 140px 0;
+    border: 2px solid #B0855B;
+    z-index: -1;
+}
+
+.working__img {
+    max-width: 100%;
+    margin: auto;
+    border: 6px;
+    border-radius: 140px 0 140px 0;
+    display: block;
+    height: 100%;
+}
+
+.button {
+    display: inline-block;
+    background: #37806B;
+    border-radius: 20px 0px;
+    line-height: 1;
+    padding: 12px 35px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.demo-text {
+    font-size: 16rem;
+    line-height: 1;
+    font-weight: 700;
+    -webkit-background-clip: text;
+	background-clip: text;
+	background-image: url('../img/bg-pic.png');
+	color: transparent;
+    background-size: contain;
+}
