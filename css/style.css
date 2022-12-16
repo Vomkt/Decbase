@@ -290,6 +290,8 @@ header .container{
     width: 50%;
     padding-right: 22px;
     padding-left: 22px;
+    max-width: 544px;
+    margin-left: auto;
 }
 
 .interioris__left-block .button {
@@ -360,10 +362,10 @@ header .container{
 }
 
 .working__img-wrapper {
-    width: 50%;
-    padding-right: 22px;
-    padding-left: 22px;
-    text-align: right;
+    /* width: 50%; */
+    /* padding-right: 22px;
+    padding-left: 22px; */
+    /* text-align: right; */
 }
 
 .working__img-inner {
@@ -400,6 +402,7 @@ header .container{
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .demo-text {
