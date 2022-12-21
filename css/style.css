@@ -276,7 +276,18 @@ header .container{
     margin-right: 20px;
 }
 
+.hero__decoration2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 212px;
+}
+
 /* SECTION INTERIORIS */
+
+.interioris{
+    padding-top: 236px;
+}
 
 .interioris__inner{
     display: flex;
@@ -342,6 +353,10 @@ header .container{
 }
 
 /* SECTION WORKING */
+
+.working{
+    padding-bottom: 205px;
+}
 
 .working__inner{
     display: flex;
@@ -422,6 +437,7 @@ header .container{
 
 .completed-work{
     background-color: #F8F8F8;
+    padding-top: 87px;
 }
 
 .completed-work__inner {
@@ -469,12 +485,7 @@ h3 {
 }
 
 .work-decoration {
-    width: 218px;
-    height: 95px;
-    left: 851px;
-    top: 3900px;
-    border: 2px solid #E0E0E0;
-    transform: matrix(1, 0, 0, -1, 0, 0);
+
 }
 
 /* TESTIMONIALS */
@@ -506,6 +517,7 @@ h3 {
     background: #FFFFFF;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
     border-radius: 60px 0px; 
+    
 }
 
 .test-icon {
@@ -515,7 +527,8 @@ h3 {
     border-radius: 20px 0 20px 0;
     display: block;
     height: 100%;
-    padding-right: 20px;
+    margin-right: 100px;
+    
 }
 
 .test-span {
@@ -533,6 +546,7 @@ h3 {
     display: flex;
     justify-content: center;
     background-color: #F8F8F8;
+    margin-top: 82px;
 }
 
 .blog__inner {
@@ -581,12 +595,14 @@ h3 {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+    margin-top: 59px;
 }
 
 .blog-h2 {
     font-weight: 600;
     font-size: 30px;
     line-height: 28px;
+    margin-top: 43px;
 }
 
 /* EMAIL */
