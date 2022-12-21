@@ -5,7 +5,7 @@
 }
 
 body, html {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 1.66;
 }
@@ -15,11 +15,21 @@ body, html {
     padding-bottom: 60px;
 }
 
+.section--spacing--lg {
+    padding-top: 93px;
+    padding-bottom: 93px;
+}
+
+.section__heading {
+    margin-bottom: 82px;
+    text-align: center;
+}
+
 /* Add styles for all fonts */
 
 
 h1{
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     /* Do not use it because it's normal by default font-style: normal;  - https://developer.mozilla.org/en-US/docs/Web/CSS/font-style */
     font-weight: 600;
     font-size: 72px;
@@ -38,7 +48,7 @@ h1{
 }
 
 h2{
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 48px;
     line-height: 1.08; /* designer durak */
@@ -46,12 +56,22 @@ h2{
     margin-bottom: 20px;
 }
 
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.08; /* designer durak */
+    color: #212121;
+    margin-bottom: 15px;
+}
+
+
 h5{
     
     /* We do not use width and height for typography
     width: 180px;
     height: 78px; */
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 24px;
     color: #212121;
@@ -70,15 +90,20 @@ h6{
 p {
     font-size: 18px;
     color: #646464;
+    margin-bottom: 15px;
 }
 
 span{
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 78px;
     color: #FFFFFF;
+}
+
+.content-inner p:last-child {
+    margin-bottom: 0;
 }
 
 .container{
@@ -424,6 +449,35 @@ header .container{
     background-color: #F8F8F8;
 }
 
+
+.work__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -100px;
+    margin-right: -100px;
+}
+
+.work__item-wrapper {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+
+.work-project {
+    width: 185px;
+    padding: 47px 50px;
+    /* width: calc(100% / 4); */
+    background: #FFFFFF;
+    box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 40px 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
 .completed-work__inner {
     text-align: center;    
 }
@@ -434,26 +488,14 @@ header .container{
     
 }
 
-.work-project {
-    width: 185px;
-    height: 182px;
-    margin-top: 100px;
-    padding: 18px 18px 18px 18px;
-    /* width: calc(100% / 4); */
-    background: #FFFFFF;
-    box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.1);
-    border-radius: 40px 0px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-}
+
 
 .work-project_down {
     margin-top: 200px;
     width: 185px;
     height: 182px;
     padding: 18px 18px 18px 18px;
-    /* width: calc(100% / 4); */
+    /* width: calc(100% / 4); 
     background: #FFFFFF;
     box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.1);
     border-radius: 40px 0px;
@@ -461,11 +503,6 @@ header .container{
     display: flex;
     align-items: center;
 
-}
-
-h3 {
-    font-weight: 700;
-    font-size: 50px;
 }
 
 .work-decoration {
@@ -475,7 +512,7 @@ h3 {
     top: 3900px;
     border: 2px solid #E0E0E0;
     transform: matrix(1, 0, 0, -1, 0, 0);
-}
+} */
 
 /* TESTIMONIALS */
 
@@ -530,63 +567,49 @@ h3 {
 /* BLOG */
 
 .blog {
-    display: flex;
-    justify-content: center;
-    background-color: #F8F8F8;
+    background-color: #F8F8F8;;
 }
 
 .blog__inner {
-    text-align: center;
+    display: flex;
+    margin-left: -68px;
+    margin-right: -68px;
 }
 
-.blog__img-wrapper {
-    width: 100%;
-    padding-right: 105px;
-    padding-left: 0px;
-    text-align: right;
+.blog__item-wrapper {
+    width: 50%;
+    padding-left: 68px;
+    padding-right: 68px;
 }
 
-.blog__img-inner {
-    position: relative; /* need this for after element*/
+.blog__item-img {
+    position: relative;
+    isolation: isolate;
+    margin-bottom: 60px;
 }
 
-.blog__img-inner::after {
+.blog__item-img::after {
     content: "";
     position: absolute;
-    left: 33px;
-    top: 33px;
+    top: 17px;
+    left: 16px;
     width: 100%;
     height: 100%;
-    border-radius: 140px 0 140px 0;
-    border: 2px solid #B0855B;
+    display: block;
+    border: 2px solid red;
+    border-radius: 100px 0 100px 0;
     z-index: -1;
 }
 
 .blog__img {
-    max-width: 100%;
-    margin: auto;
-    border: 6px;
-    border-radius: 140px 0 140px 0;
+    height: 387px;
     display: block;
-    height: 100%;
-
+    background-color: grey;
+    border-radius: 100px 0 100px 0;
 }
 
-.button {
-    display: inline-block;
-    background: #37806B;
-    border-radius: 20px 0px;
-    line-height: 1;
-    padding: 12px 35px;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.blog-h2 {
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 28px;
+.blog__item-wrapper .button {
+    margin-top: 45px;
 }
 
 /* EMAIL */
