@@ -465,7 +465,6 @@ header .container{
     padding-top: 87px;
 }
 
-
 .work__inner {
     display: flex;
     flex-wrap: wrap;
@@ -533,44 +532,49 @@ header .container{
 /* TESTIMONIALS */
 
 
-.testimonials__inner {
+.testimonials__heading {
     text-align: center;
+    margin-top: 163px;
 }
 
-.testimonials__block-item{
+.testimonials__inner {
     display: flex;
-    justify-content: center;
-    margin-left: -18px;
-    margin-right: -18px;
-    margin-top: 50px;
+    margin-left: -70px;
+    margin-right: -70px;
+    margin-top: 100px;
+    padding-bottom: 183px;
 }
 
-.testimonials__item {   
-    padding-left: 18px;
-    width: calc(100% / 2);
-    margin: auto;
+.testimonials__item-wrapper {
+    width: 50%;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
-.testimonials__item-inner {
-    display: flex;
-    padding: 30px;
-    padding-right: 21px;
-    height: 100%;
+.testimonials__item-content {
+    width: 571px;
+    height: 226px;
+    /* padding: 30px; */
     background: #FFFFFF;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
-    border-radius: 60px 0px; 
-    
+    border-radius: 60px 0px;
+    padding-left: 100px;
+    padding-top: 41px;
+    margin-left: 70px;
+} 
+
+.testimonials__item-inner {
+    position: relative;    
 }
 
 .test-icon {
+    position: absolute;
     max-width: 100%;
-    margin: auto;
+    height: 100%;
     border: 6px;
     border-radius: 20px 0 20px 0;
-    display: block;
-    height: 100%;
-    margin-right: 100px;
-    
+    display: block; 
+   
 }
 
 .test-span {
@@ -580,7 +584,7 @@ header .container{
     font-size: 18px;
     line-height: 28px;
     color: #646464;
-}
+} 
 
 /* BLOG */
 
@@ -635,14 +639,33 @@ header .container{
 
 .email__inner {
     text-align: center;
+    margin-top: 197px;
 }
 
 .email-form {
-    text-align: center;    
+    text-align: center;
+    margin-bottom: 198px;
 }
 
 .input {
     background: #EEEEEE;
-    width:600px;
-    height: 40px;
+    width:772px;
+    height: 50px;
+    border-radius: 2px 0px 0px 0px;
+}
+
+.button-email {
+    display: inline-block;
+    background: #37806B;
+    border-radius: 0px 0px 20px 0px;
+    line-height: 1;
+    padding: 12px 35px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.form-p{
+    margin-top: 77px;
+    margin-bottom: 30px;
 }
