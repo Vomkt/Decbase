@@ -456,8 +456,6 @@ header .container{
     background-size: contain;
 }
 
-/* my drafts */
-
 /* COMPLETED WORK */
 
 .completed-work{
@@ -477,57 +475,47 @@ header .container{
     padding-right: 100px;
 }
 
-
 .work-project {
     width: 185px;
     padding: 47px 50px;
-    /* width: calc(100% / 4); */
     background: #FFFFFF;
     box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.1);
     border-radius: 40px 0px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* 
-.completed-work__inner {
-    text-align: center;    
-}
-
-.work {
-    display: flex;    
-    justify-content: space-between;
-    
-}
-
-
-
-.work-project_down {
-    margin-top: 200px;
+.work-project2 {
     width: 185px;
-    height: 182px;
-    padding: 18px 18px 18px 18px;
-    /* width: calc(100% / 4); 
+    padding: 47px 50px;
     background: #FFFFFF;
     box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.1);
     border-radius: 40px 0px;
-    justify-content: center;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-
+    margin-top: 100px;
+    
 }
 
 .work-decoration {
-    width: 218px;
-    height: 95px;
-    left: 851px;
-    top: 3900px;
-    border: 2px solid #E0E0E0;
-    transform: matrix(1, 0, 0, -1, 0, 0);
-} */
+    padding-left: 280px;
+    margin-top: -291px;
+}
+
+.work-decoration2 {
+    padding-left: 670px;
+    margin-top: -291px;
+}
+
+.work-decoration3 {
+    padding-left: 1060px;
+    margin-top: -330px;
+}
+
 
 /* TESTIMONIALS */
 
@@ -554,7 +542,6 @@ header .container{
 .testimonials__item-content {
     width: 571px;
     height: 226px;
-    /* padding: 30px; */
     background: #FFFFFF;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
     border-radius: 60px 0px;
@@ -569,11 +556,12 @@ header .container{
 
 .test-icon {
     position: absolute;
-    max-width: 100%;
-    height: 100%;
+    max-width: 60%;
+    height: 60%;
     border: 6px;
     border-radius: 20px 0 20px 0;
-    display: block; 
+    display: block;
+    top: 45px; 
    
 }
 
@@ -584,7 +572,7 @@ header .container{
     font-size: 18px;
     line-height: 28px;
     color: #646464;
-} 
+}
 
 /* BLOG */
 
@@ -636,7 +624,6 @@ header .container{
 
 /* EMAIL */
 
-
 .email__inner {
     text-align: center;
     margin-top: 197px;
@@ -652,6 +639,8 @@ header .container{
     width:772px;
     height: 50px;
     border-radius: 2px 0px 0px 0px;
+    outline: none; 
+    border: none;
 }
 
 .button-email {
@@ -663,9 +652,78 @@ header .container{
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+    outline: none; 
+    border: none;
 }
 
 .form-p{
     margin-top: 77px;
     margin-bottom: 30px;
+}
+
+/* FOOTER */
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #F8F8F8;
+}
+
+.footer-inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 84px;
+}
+
+/* .Quick-Links > ul > li {
+    margin-right: 33px; 
+}
+
+.Quick-Links > ul > li:last-child {
+    margin-right: 0;
+} */
+
+.quick-Links > ul > li > a{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    color: #646464;
+    text-decoration: none;
+}
+
+.company > ul > li > a{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    color: #646464;
+    text-decoration: none;
+}
+
+.contact-us {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    color: #646464;
+}
+
+.quick-Links > ul{
+    list-style: none;
+}
+
+.company > ul{
+    list-style: none;
+}
+
+.contact-us > ul{
+    list-style: none;
 }
