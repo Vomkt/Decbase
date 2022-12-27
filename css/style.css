@@ -377,6 +377,8 @@ header .container{
     text-transform: uppercase;
 }
 
+
+
 /* SECTION WORKING */
 
 .working{
@@ -454,6 +456,13 @@ header .container{
 	background-image: url('../img/bg-pic.png');
 	color: transparent;
     background-size: contain;
+}
+
+.hero__decoration4 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 212px;
 }
 
 /* COMPLETED WORK */
@@ -638,13 +647,16 @@ header .container{
     background: #EEEEEE;
     width:772px;
     height: 50px;
-    border-radius: 2px 0px 0px 0px;
+    border-radius: 20px 0px 0px 0px;
     outline: none; 
     border: none;
 }
 
 .button-email {
     display: inline-block;
+    position: relative;
+    height: 50px;
+    left: -5px;
     background: #37806B;
     border-radius: 0px 0px 20px 0px;
     line-height: 1;
@@ -679,19 +691,11 @@ header .container{
     margin-top: 84px;
 }
 
-/* .Quick-Links > ul > li {
-    margin-right: 33px; 
-}
-
-.Quick-Links > ul > li:last-child {
-    margin-right: 0;
-} */
-
 .quick-Links > ul > li > a{
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 40px;
     letter-spacing: 1px;
     color: #646464;
     text-decoration: none;
@@ -701,7 +705,7 @@ header .container{
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 40px;
     letter-spacing: 1px;
     color: #646464;
     text-decoration: none;
@@ -711,7 +715,7 @@ header .container{
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 40px;
     letter-spacing: 1px;
     color: #646464;
 }
