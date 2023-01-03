@@ -583,6 +583,17 @@ header .container{
     color: #646464;
 }
 
+.quotes {
+    position: absolute;
+    left: 580px;
+    top: 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 109px;
+    color: #B0855B;
+}
+
 /* BLOG */
 
 .blog {
@@ -672,6 +683,13 @@ header .container{
     margin-top: 77px;
     margin-bottom: 30px;
 }
+
+::placeholder {
+    font-size: 18px;
+    line-height: 55px;
+    padding-left: 30px;
+    color: #646464;
+  }
 
 /* FOOTER */
 
