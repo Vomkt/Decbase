@@ -10,6 +10,10 @@ body, html {
     line-height: 1.66;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .section {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -23,6 +27,21 @@ body, html {
 .section__heading {
     margin-bottom: 82px;
     text-align: center;
+}
+
+button {
+    transition: .3s;
+    cursor: pointer;
+}
+
+a {
+    cursor: pointer;
+    color: green;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* Add styles for all fonts */
@@ -47,6 +66,24 @@ h1{
     margin-bottom: 23px;
 }
 
+@media screen and (max-width: 1440px) {
+    h1 {
+        font-size: 56px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    h1 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+}
+
 h2{
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -56,6 +93,12 @@ h2{
     margin-bottom: 20px;
 }
 
+@media screen and (max-width: 1440px) {
+    h2 {
+        font-size: 37px;
+    }
+}
+
 h3 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
@@ -63,6 +106,27 @@ h3 {
     line-height: 1.08; /* designer durak */
     color: #212121;
     margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1440px) {
+    h3 {
+        font-size: 23px;
+    }
+}
+
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.08; /* designer durak */
+    color: #212121;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1440px) {
+    h4 {
+        font-size: 20px;
+    }
 }
 
 
@@ -78,6 +142,12 @@ h5{
     margin-bottom: 5px;
 }
 
+@media screen and (max-width: 1440px) {
+    h5 {
+        font-size: 19px;
+    }
+}
+
 h6{
     /* font-family: 'Poppins';  Removed, as by design it's open sans, so we can remove it if we have open sans for body*/
     font-weight: 600;
@@ -87,10 +157,22 @@ h6{
     margin-bottom: 5px;
 }
 
+@media screen and (max-width: 1440px) {
+    h6 {
+        font-size: 18px;
+    }
+}
+
 p {
     font-size: 18px;
     color: #646464;
     margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1440px) {
+    p {
+        font-size: 16px;
+    }
 }
 
 span{
@@ -102,6 +184,12 @@ span{
     color: #FFFFFF;
 }
 
+@media screen and (max-width: 1440px) {
+    span {
+        font-size: 16px;
+    }
+}
+
 .content-inner p:last-child {
     margin-bottom: 0;
 }
@@ -109,6 +197,9 @@ span{
 .container{
     margin: 0 auto;
     width: 1346px;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* MENU */
@@ -120,6 +211,20 @@ span{
 header {
     padding-top: 34px;
     padding-bottom: 34px;
+}
+
+@media screen and (max-width: 991px) {
+    header {
+       display: none;
+    }
+    
+    section, footer {
+        display: none;
+    }
+
+    .hero, .services {
+        display: block;
+    }
 }
 
 header .container{
@@ -137,14 +242,12 @@ header .container{
 }
 
 .main-menu > ul > li > a{
-    font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 1px;
     color: #646464;
     /* margin-right: 33px ;   Remove from here and move to LI */
-    text-decoration: none;
 }
 
 .btn{
@@ -177,10 +280,26 @@ header .container{
     margin-right: -22px;
 }
 
+@media screen and (max-width: 768px) {
+    .hero__inner{
+        width: 500px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .hero__left-block{
     width: 50%;
     padding-right: 22px;
     padding-left: 22px;
+}
+
+@media screen and (max-width: 768px) {
+    .hero__left-block{
+        width: 100%;
+        padding-bottom: 50px;
+    }
 }
 
 .hero__left-block .button {
@@ -193,9 +312,24 @@ header .container{
     padding-left: 22px;
 }
 
+@media screen and (max-width: 768px) {
+    .hero__img-wrapper{
+        width: 100%;
+    }
+}
+
 .hero__img-inner {
     position: relative; /* need this for after element*/
 }
+
+@media screen and (max-width: 1440px) {
+    .hero__img-inner {
+        max-width: calc(100% - 35px);
+    }
+}
+
+
+
 /*
 Селектор ::after додає що-небудь після контенту вказаного елемента(-ів).
 Використовуйте властивість content для визначення власного контенту, що буде додано.
@@ -210,7 +344,7 @@ header .container{
     top: 33px;
     width: 100%;
     height: 100%;
-    border-radius: 140px 0 140px 0;
+    border-radius: 30% 0 30% 0;
     border: 2px solid #B0855B;
     z-index: -1; /*Властивість z-index визначає порядок стека елемента. Іншими словами, Ви можете розмістити елемент на сторінці вище іншого елементу або перед ним.*/
 }
@@ -219,7 +353,7 @@ header .container{
     max-width: 100%;
     margin: auto; /*Браузер самостійно обчислить відступ.*/
     border: 6px;
-    border-radius: 140px 0 140px 0;
+    border-radius: 30% 0 30% 0;
     display: block; /*Елемент показується як блоковий. Вказавши це значення для елемента <span> - він почне вести себе як блоковий, тобто, його вміст буде завжди починатися з нового рядка.*/
     height: 100%;
 }
@@ -229,6 +363,12 @@ header .container{
     left: 0;
     bottom: 0;
     width: 212px;
+}
+
+@media screen and (max-width: 991px) {
+    .hero__decoration {
+        display: none;
+    }
 }
 
 .hero__decoration svg {
@@ -242,7 +382,6 @@ header .container{
     line-height: 1;
     padding: 12px 35px;
     color: white;
-    text-decoration: none;
     text-transform: uppercase;
 }
 
@@ -261,18 +400,81 @@ header .container{
     color: #212121;
 }
 
-.services__block-item{
+.services__header {
     display: flex;
-    justify-content: center; /*Елементи розташовані в центрі контейнера.*/
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.services__title {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.decbase-arrows {
+    padding-left: 15px;
+    padding-right: 33px;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* margin-left: -15px;
+    margin-right: -15px; */
+}
+
+.decbase-arrows__btn {
+    width: 50px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: -1px 3px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.decbase-arrows__btn:first-child {
+    margin-right: 18px;
+}
+
+.decbase-arrows__btn svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: .3s;
+}
+
+.decbase-arrows__btn:hover {
+    background-color: #37806B;
+}
+
+.slick-track {
+    padding-bottom: 25px;
+}
+
+.decbase-arrows__btn:hover path {
+    stroke: white;
+}
+
+.decbase-arrows__btn--next svg{
+    transform: translate(-50%,-50%) rotate(180deg);
+}
+
+
+.services__block-item{
+    /* display: flex;
+    justify-content: center; Елементи розташовані в центрі контейнера.
     margin-left: -18px;
-    margin-right: -18px;
+    margin-right: -18px; */
     margin-top: 50px;
 }
 
 .services__item {   
     padding-left: 18px;
     padding-right: 18px;
-    width: calc(100% / 3); /*calc() - это функция CSS, которая даёт возможность рассчитать значения свойств CSS во время их определения.*/
+    
 }
 
 .services__item:hover .services__item-inner {
@@ -373,7 +575,6 @@ header .container{
     line-height: 1;
     padding: 12px 35px;
     color: white;
-    text-decoration: none;
     text-transform: uppercase;
 }
 
@@ -442,7 +643,6 @@ header .container{
     line-height: 1;
     padding: 12px 35px;
     color: white;
-    text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -536,6 +736,7 @@ header .container{
 
 .testimonials__inner {
     display: flex;
+    flex-wrap: wrap;
     margin-left: -70px;
     margin-right: -70px;
     margin-top: 100px;
@@ -550,6 +751,7 @@ header .container{
 
 .testimonials__item-content {
     width: 571px;
+    max-width: 100%;
     height: 226px;
     background: #FFFFFF;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
@@ -644,74 +846,106 @@ header .container{
 
 /* EMAIL */
 
-.email__inner {
+.email {
+    padding-top: 197px;
+    padding-bottom: 192px;
     text-align: center;
-    margin-top: 197px;
 }
 
-.email-form {
-    text-align: center;
-    margin-bottom: 198px;
+.email__inner hr {
+    width: 416px;
+    margin-top: 37px;
+    margin-bottom: 37px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.email-form form {
+    display: flex;
+    justify-content: center;
+} 
 
 .input {
+    font-family: 'Open Sans', sans-serif;
     background: #EEEEEE;
-    width:772px;
+    font-size: 18px;
+    width:600px;
     height: 50px;
     border-radius: 20px 0px 0px 0px;
     outline: none; 
     border: none;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .button-email {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
     display: inline-block;
     position: relative;
     height: 50px;
-    left: -5px;
     background: #37806B;
     border-radius: 0px 0px 20px 0px;
     line-height: 1;
     padding: 12px 35px;
     color: white;
-    text-decoration: none;
     text-transform: uppercase;
     outline: none; 
     border: none;
 }
 
+.button-email:hover {
+    background-color: #CAA892;
+}
+
 .form-p{
-    margin-top: 77px;
+    margin-top: 37px;
     margin-bottom: 30px;
 }
 
 ::placeholder {
     font-size: 18px;
     line-height: 55px;
-    padding-left: 30px;
     color: #646464;
   }
 
 /* FOOTER */
 
 .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
     background: #F8F8F8;
+}
+
+.footer__main {
+    padding-top: 93px;
+    padding-bottom: 69px;
 }
 
 .footer-inner{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
+.footer-inner__item h4 {
+    margin-bottom: 35px;
+}
+
+.footer-logo .logo {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
 .copyright {
+    border: 1px solid #C4C4C4;
     text-align: center;
-    margin-top: 84px;
+    padding: 15px;
+    font-size: 18px;
+    color:  #646464;;
 }
 
-.quick-Links > ul > li > a{
-    font-style: normal;
-    font-weight: 600;
+.footer-inner__item a,
+.footer-inner__item
+{
     font-size: 16px;
     line-height: 40px;
     letter-spacing: 1px;
@@ -719,33 +953,28 @@ header .container{
     text-decoration: none;
 }
 
-.company > ul > li > a{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 40px;
-    letter-spacing: 1px;
-    color: #646464;
-    text-decoration: none;
+.footer-inner__item a:hover {
+    color: green;
 }
 
-.contact-us {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 40px;
-    letter-spacing: 1px;
-    color: #646464;
-}
-
-.quick-Links > ul{
+.footer-inner__item > ul{
     list-style: none;
 }
 
-.company > ul{
-    list-style: none;
+.Follow-Us a circle{
+    fill: red;
 }
 
-.contact-us > ul{
-    list-style: none;
+.Follow-Us a:hover circle{
+    fill: green;
 }
+
+.work-decoration3,
+.work-decoration2,
+.work-decoration1,
+.testimonials {
+    display: none;
+}
+
+
+
